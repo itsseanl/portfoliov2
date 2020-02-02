@@ -22,7 +22,7 @@ const Technologies = () => {
   };
   return (
     <section className="technologies">
-      <h2>The Essentials</h2>
+      <h2 className="section-heading">The Essentials</h2>
       <div className="icons">
         <div
           className="icon"
@@ -145,6 +145,11 @@ const Technologies = () => {
         </div>
       </div>
       <style jsx>{`
+        .section-heading {
+          position: sticky;
+          top: 15px;
+          z-index: 1;
+        }
         .technologies {
           background: ${accentColor};
         }

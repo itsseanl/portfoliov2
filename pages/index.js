@@ -1,3 +1,5 @@
+import { MdTimer } from "react-icons/md";
+import { FaUsers, FaTools, FaGlasses } from "react-icons/fa";
 import MyHeader from "../components/Header";
 import Technologies from "../components/Technologies";
 import { styled, createGlobalStyle } from "styled-components";
@@ -37,12 +39,30 @@ function HomePage() {
           <h2>Skills & Experience</h2>
           <div className="exp-items">
             <div className="exp-item">
+              <MdTimer />
+              <h3>Project Management</h3>
+              <div className="underline tiny"></div>
               <p>coming soon</p>
             </div>
             <div className="exp-item">
+              <FaUsers />
+              <h3>Team-Based Workflow</h3>
+              <div className="underline tiny"></div>
+
               <p>coming soon</p>
             </div>
             <div className="exp-item">
+              <FaTools />
+              <h3>Site Maintenance</h3>
+              <div className="underline tiny"></div>
+
+              <p>coming soon</p>
+            </div>
+            <div className="exp-item">
+              <FaGlasses />
+              <h3>Attention to Detail</h3>
+              <div className="underline tiny"></div>
+
               <p>coming soon</p>
             </div>
           </div>
@@ -55,6 +75,7 @@ function HomePage() {
           background: #333;
           width: 60%;
         }
+
         .short {
           width: 40%;
         }
@@ -87,9 +108,10 @@ function HomePage() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 50px 10%;
+          padding: 50px 5%;
           text-align: center;
         }
+
         .overlay {
           background: rgba(255, 255, 255, 0.8);
           display: flex;
@@ -97,7 +119,34 @@ function HomePage() {
           justify-content: center;
           align-items: center;
           width: 100%;
+
           margin: auto;
+        }
+        .experience > h2 {
+          width: 90%;
+          left: 0;
+          right: 0;
+          margin: 25px auto;
+        }
+        .exp-items {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .tiny {
+          width: 20%;
+        }
+        .exp-item {
+          width: 90%;
+          left: 0;
+          right: 0;
+          margin: 25px auto;
+          box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.3);
+          background: #fffff0;
+          padding: 25px 15px;
+        }
+        .exp-item :global(svg) {
+          font-size: 28px;
         }
       `}</style>
     </>

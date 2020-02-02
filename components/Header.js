@@ -28,6 +28,9 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  h1 {
+    position: sticky;
+  }
   ul {
     list-style: none;
     display: flex;
