@@ -155,11 +155,11 @@ function HomePage() {
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Lobster";
-    src: url("../assets/fonts/Lobster/Lobster-Regular.ttf") format("truetype");
+    src: url("../assets/Lobster/Lobster-Regular.ttf") format("truetype");
   }
   @font-face {
     font-family: "Ubuntu";
-    src: url("../assets/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+    src: url("../assets/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
   }
   * {
     box-sizing: border-box;
