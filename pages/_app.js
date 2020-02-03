@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 			<Component {...pageProps} />
 
 			<style jsx global>{`
-				// @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+				@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
 
 				h1,
 				h2,
