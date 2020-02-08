@@ -11,7 +11,7 @@ function HomePage() {
 			<MyHeader />
 			<main>
 				<Technologies />
-				<section className="stacks">
+				<section className="featured-project">
 					<div className="featured">
 						<div className="overlay">
 							<h2>Featured Project</h2>
@@ -68,14 +68,33 @@ function HomePage() {
 					</div>
 				</section>
 			</main>
-			<footer></footer>
+			<footer>
+				<div className="footer-heading">
+					<h2>Get in touch!</h2>
+					<div className="underline"></div>
+				</div>
+
+				<form>
+					<input placeholder="name"></input>
+					<input placeholder="email"></input>
+					<textarea placeholder="Message..."></textarea>
+					<input type="submit" value="submit"></input>
+				</form>
+			</footer>
 			<style jsx global>{`
+				.experience {
+					background: rgb(51, 51, 51);
+					background: linear-gradient(
+						0deg,
+						rgba(51, 51, 51, 1) 10%,
+						rgba(255, 255, 255, 1) 10%
+					);
+				}
 				.underline {
 					height: 4px;
 					background: #333;
 					width: 60%;
 				}
-
 				.short {
 					width: 40%;
 				}
@@ -83,13 +102,13 @@ function HomePage() {
 					z-index: 1;
 					background: #fff;
 				}
-				.stacks {
+				.featured-project {
 					width: 100%;
 					left: 0;
 					right: 0;
 					margin: auto;
 				}
-				.stacks > p {
+				.featured-project > p {
 					width: 90%;
 					left: 0;
 					right: 0;
@@ -122,12 +141,18 @@ function HomePage() {
 
 					margin: auto;
 				}
+				.experience {
+				}
 				.experience > h2 {
-					width: 90%;
+					width: 100%;
 					left: 0;
 					right: 0;
-					margin: 25px auto;
+					padding: 25px 10%;
+					position: sticky;
+					top: 0;
+					background: #fff;
 				}
+
 				.exp-items {
 					display: flex;
 					flex-direction: column;
@@ -147,6 +172,39 @@ function HomePage() {
 				}
 				.exp-item :global(svg) {
 					font-size: 28px;
+				}
+				footer {
+					background: #333;
+					margin-top: -20px;
+				}
+				footer > .footer-heading > h2 {
+					color: #fff;
+					background: #333;
+				}
+				footer > .footer-heading > .underline {
+					background: #fff;
+
+					width: 60%;
+				}
+				footer > .footer-heading {
+					padding-left: 10%;
+					padding-right: 10%;
+					position: relative;
+					color: #fff !important;
+					background: #333;
+				}
+
+				footer > form {
+					background: #333;
+					min-height: 1050px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				footer > .underline {
+					background: #fff;
+					position: relative;
 				}
 			`}</style>
 		</>
