@@ -2,7 +2,8 @@ import { MdTimer } from "react-icons/md";
 import { FaUsers, FaTools, FaGlasses } from "react-icons/fa";
 import MyHeader from "../components/Header";
 import Technologies from "../components/Technologies";
-import { styled, createGlobalStyle } from "styled-components";
+import ContactForm from "../components/ContactForm";
+import { createGlobalStyle } from "styled-components";
 
 function HomePage() {
 	return (
@@ -72,14 +73,8 @@ function HomePage() {
 				<div className="footer-heading">
 					<h2>Get in touch!</h2>
 					<div className="underline"></div>
+					<ContactForm />
 				</div>
-
-				<form>
-					<input placeholder="name"></input>
-					<input placeholder="email"></input>
-					<textarea placeholder="Message..."></textarea>
-					<input type="submit" value="submit"></input>
-				</form>
 			</footer>
 			<style jsx global>{`
 				.experience {
@@ -176,6 +171,8 @@ function HomePage() {
 				footer {
 					background: #333;
 					margin-top: -20px;
+					height: auto;
+					padding: 50px 0;
 				}
 				footer > .footer-heading > h2 {
 					color: #fff;
@@ -194,15 +191,7 @@ function HomePage() {
 					background: #333;
 				}
 
-				footer > form {
-					background: #333;
-					min-height: 1050px;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-				}
-				footer > .underline {
+				form > footer > .underline {
 					background: #fff;
 					position: relative;
 				}
