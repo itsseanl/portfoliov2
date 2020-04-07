@@ -18914,7 +18914,7 @@ var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["createG
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*****************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Froot%2Fsites%2Fportfoliov2%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************/
@@ -18937,5 +18937,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
