@@ -1,66 +1,96 @@
-import React from "react";
-import { Formik } from "formik";
+import React, {useState} from "react";
+
 
 const ContactForm = () => {
+
+	const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null }
+  })
+
+  const [inputs, setInputs] = useState({
+    email: '',
+    message: ''
+  })
+
+  const handleResponse = (status, msg) => {
+    if (status === 200) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg }
+      })
+      setInputs({
+        email: '',
+        message: ''
+      })
+    } else {
+      setStatus({
+        info: { error: true, msg: msg }
+      })
+    }
+  }
+
+  const handleOnChange = e => {
+    e.persist()
+    setInputs(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }))
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null }
+    })
+  }
+
+  const handleOnSubmit = async e => {
+    e.preventDefault()
+    setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(inputs)
+    })
+    const text = await res.text()
+    handleResponse(res.status, text)
+  }
+	
 	return (
 		<>
-			<Formik
-				initialValues={{ name: "", email: "", message: "" }}
-				validate={values => {
-					const errors = {};
-					if (!values.email) {
-						errors.email = "Required";
-					} else if (
-						!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-					) {
-						errors.email = "Invalid email address";
-					}
-					return errors;
-				}}
-				onSubmit={(values, { setSubmitting }) => {
-					setTimeout(() => {
-						alert(JSON.stringify(values, null, 2));
-						setSubmitting(false);
-					}, 400);
-				}}
-			>
-				{({
-					values,
-					errors,
-					touched,
-					handleChange,
-					handleBlur,
-					handleSubmit,
-					isSubmitting
-					/* and other goodies */
-				}) => (
-					<form onSubmit={handleSubmit}>
-						<input
-							type="text"
-							name="name"
-							onChange={handleChange}
-							value={values.name}
-							placeholder="name"
-						></input>
-						<input
-							type="email"
-							name="email"
-							onChange={handleChange}
-							value={values.email}
-							placeholder="email"
-						></input>
-						<textarea
-							name="message"
-							onChange={handleChange}
-							value={values.message}
-							placeholder="Message..."
-						></textarea>
-						<button type="submit" value="submit">
-							Submit
-						</button>
-					</form>
-				)}
-			</Formik>
+			<form onSubmit={handleOnSubmit}>
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          onChange={handleOnChange}
+          required
+          value={inputs.email}
+        />
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          onChange={handleOnChange}
+          required
+          value={inputs.message}
+        />
+        <button type="submit" disabled={status.submitting}>
+          {!status.submitting
+            ? !status.submitted
+              ? 'Submit'
+              : 'Submitted'
+            : 'Submitting...'}
+        </button>
+      </form>
+      {status.info.error && (
+        <div className="error">Error: {status.info.msg}</div>
+      )}
+      {!status.info.error && status.info.msg && (
+        <div className="success">{status.info.msg}</div>
+      )}
 			<style jsx>{`
 				button {
 					background: #fffff0;
