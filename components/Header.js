@@ -3,6 +3,7 @@ import styled from "styled-components";
 const MyHeader = () => {
   return (
     <Header>
+    	<div className="custom-wrapper">
       <h1>Sean Lyons</h1>
       <ul>
         <li>
@@ -12,22 +13,33 @@ const MyHeader = () => {
           <FaLinkedin />
         </li>
       </ul>
+      </div>
     </Header>
   );
 };
 
-const Header = styled.header`
+const Header = styled.header`{
   background: #fffff0;
-  padding: 25px 5%;
+  padding-top:25px;
+  padding-bottom:25px;
   color: #333;
   // border-bottom: 8px solid #333;
   box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
-  display: flex;
+  
+  height: 100px;
+  .custom-wrapper{
+  	width:100%;
+  	max-width:1200px;
+  	left:0;
+  	right:0;
+  	margin:auto;
+  	padding-left:25px;
+  	padding-right:25px;
+  	display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
   h1 {
     position: sticky;
   }
@@ -41,7 +53,9 @@ const Header = styled.header`
       :global(svg) {
         color: red;
       }
-    }
+    }	
+  }
+  }
   }
 `;
 export default MyHeader;

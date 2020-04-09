@@ -22,7 +22,9 @@ const Technologies = () => {
 	};
 	return (
 		<section className="technologies">
+			<div className="custom-wrapper">
 			<h2 className="section-heading">The Essentials</h2>
+			<div className="content">
 			<div className="icons">
 				<div
 					className="icon"
@@ -143,6 +145,8 @@ const Technologies = () => {
 					<div className="underline"></div>
 					<p>{descriptionText}</p>
 				</div>
+				</div>
+			</div>
 			</div>
 			<style jsx>{`
 				.section-heading {
@@ -156,9 +160,18 @@ const Technologies = () => {
 					background: ${accentColor};
 					padding-top: 40px;
 				}
-				.technologies > h2 {
+				.technologies > .custom-wrapper{
+					width:100%;
+				}
+				.technologies > .custom-wrapper > .content{
+					width:100%;
+					margin:0;
+					padding:0;
+				}
+				.technologies > .custom-wrapper > h2 {
 					margin: 0;
 					padding: 15px 10%;
+					padding-left:15px;
 					color: #fff;
 
 					left: 0;
@@ -195,6 +208,7 @@ const Technologies = () => {
 					transition: 0.3s all;
 					color: #333;
 					height: 75px;
+
 				}
 				.icon > :global(svg) {
 					padding: 5%;
@@ -208,7 +222,7 @@ const Technologies = () => {
 					background: ${accentColor};
 				}
 				.description {
-					background-image: linear-gradient(${accentColor} 50%, #fff 50%);
+/* 					background-image: linear-gradient(${accentColor} 50%, #fff 50%); */
 					transition: 0.3s all;
 					display: flex;
 					flex-direction: column;
@@ -229,6 +243,68 @@ const Technologies = () => {
 					height: 4px;
 					background: ${accentColor};
 					width: 60%;
+				}
+				
+				@media (min-width:768px){
+					.technologies{
+						max-width:1200px;
+						left:0;
+						right:0;
+						margin:auto;
+						display:block;
+					}
+					.technologies > .custom-wrapper{
+						width:90%;
+					}
+					.technologies > .custom-wrapper > h2{
+						margin:30px auto;
+						margin-left:0;
+						padding-left:0;
+						
+					}
+					.content{
+						display:flex;
+						flex-direction:row;
+						justify-content:flex-start;
+						align-items:flex-start;
+						padding-bottom:50px;
+					}
+					.icons{
+						
+						padding:15px;
+						padding-top:0;
+						padding-left:0;
+						display:flex;
+						justify-content:flex-start;
+						align-items:flex-start;
+						flex-wrap:wrap;
+						margin:0;
+					
+					}
+					.icon{
+						height:120px;
+						width:40%;
+						margin:5px 15px;
+						
+						margin-left:0;
+					}
+					.icon:nth-child(1),
+					.icon:nth-child(2){
+						margin-top:0;
+					}
+					.description,
+					.icons{
+						background:none;
+						height:100%;
+						width:100%;
+					}
+					.description-text{
+						height:100%;
+						margin:auto;
+						width:100%;
+						margin-bottom:50px;
+					}
+					
 				}
 			`}</style>
 		</section>

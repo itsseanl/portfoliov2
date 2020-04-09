@@ -20,4 +20,6 @@ export default async function(req, res) {
     console.log('ERROR', error)
     res.status(400).send('Message not sent.')
   }
+  
+  
 }

@@ -92,6 +92,13 @@ const ContactForm = () => {
         <div className="success">{status.info.msg}</div>
       )}
 			<style jsx>{`
+				label{
+					font-family:"Lobster", sans-serif;
+					font-size:18px;
+					text-align:left;
+					width:100%;
+					color:#fff;
+				}
 				button {
 					background: #fffff0;
 					font-family: "Ubuntu", sans-serif;
