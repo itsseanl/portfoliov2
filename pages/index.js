@@ -246,6 +246,17 @@ function HomePage() {
 
 				}
 				@media(min-width:768px){
+					.experience > .custom-wrapper > h2{
+						padding-left:0;
+					}
+					.exp-item:nth-child(1),
+					.exp-item:nth-child(3){
+						margin-left:0;
+					}
+					.exp-item:nth-child(2),
+					.exp-item:nth-child(4){
+						margin-right:0;
+					}
 					.custom-wrapper{
 						width:90%;
 						max-width:1200px;
@@ -277,6 +288,10 @@ function HomePage() {
 						.footer-left{
 							align-items:flex-start;
 							justify-content:center;
+							margin-left:15px;
+						}
+						.footer-right{
+							margin-right:15px; 
 						}
 						.footer-heading,
 						.footer-left > p,
