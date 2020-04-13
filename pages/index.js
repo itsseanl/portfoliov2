@@ -42,7 +42,7 @@ function HomePage() {
 					</div>
 				</section>
 				<section className="experience">
-				<div className="custom-wrapper">
+				<div className="custom-wrapper section-heading">
 				<h2>Skills & Experience</h2>
 				</div> 
 				<div className="custom-wrapper">
@@ -167,14 +167,14 @@ function HomePage() {
 					margin: auto;
 				}
 				.experience {
+					padding-bottom:50px;
 				}
-				.experience > h2,
-				.experience > .custom-wrapper > h2 {
+				.experience > .section-heading {
 					width: 100%;
 					left: 0;
 					right: 0;
-					padding: 15px 25px;
-					
+					padding: 1px 25px;
+					z-index:9999;
 					position: sticky;
 					top: 0;
 					background: #fff;

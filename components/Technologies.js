@@ -247,10 +247,11 @@ const Technologies = () => {
 				
 				@media (min-width:768px){
 					.technologies{
-						max-width:1200px;
+						
 						left:0;
 						right:0;
 						margin:auto;
+						padding-bottom:50px;
 						display:block;
 					}
 					.technologies > .custom-wrapper{
