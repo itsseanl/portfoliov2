@@ -4,14 +4,14 @@ import {
 	DiGithubBadge,
 	DiSass,
 	DiStackoverflow,
-	DiWordpress
+	DiWordpress,
 } from "react-icons/di";
 import { useState } from "react";
 
 const Technologies = () => {
 	const [accentColor, setAccentColor] = useState("#333");
 	const [descriptionText, setDescriptionText] = useState(
-		"Curabitur semper congue nisi volutpat vestibulum. Etiam vitae dui dui. Etiam condimentum pellentesque quam id dapibus. Suspendisse pulvinar porta dapibus. Nam hendrerit mi ac volutpat dignissim. Suspendisse potenti. Sed tempus scelerisque tortor, vitae tincidunt nulla. Quisque sagittis erat urna, vel volutpat est iaculis vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris molestie tellus lectus, eu vulputate orci dapibus nec. Phasellus tempor ipsum non risus fermentum, et rutrum magna mattis. Donec eleifend porta eros. Integer vel justo dignissim elit tempor blandit. Nunc ut tortor in erat elementum pretium. Duis ut ex vel erat venenatis fermentum elementum sit amet massa. Etiam semper urna vestibulum, pretium tortor vestibulum, dictum dui."
+		"VS Code is my editor of choice. A great plugin library, easy to navigate UI, and built-in terminal make this an easy choice for me. Prettier and Color Highlight have changed my life forever!"
 	);
 	const [descriptionTitle, setDescriptionTitle] = useState("VS Code");
 
@@ -22,134 +22,138 @@ const Technologies = () => {
 	};
 	return (
 		<section className="technologies">
+			<div className="full-width">
+				<div className="custom-wrapper">
+					<h2 className="section-heading">The Essentials</h2>
+				</div>
+			</div>
 			<div className="custom-wrapper">
-			<h2 className="section-heading">The Essentials</h2>
-			<div className="content">
-			<div className="icons">
-				<div
-					className="icon"
-					id="vscode"
-					onFocus={() =>
-						setTechs(
-							"#272935",
-							"Curabitur semper congue nisi volutpat vestibulum. Etiam vitae dui dui. Etiam condimentum pellentesque quam id dapibus. Suspendisse pulvinar porta dapibus. Nam hendrerit mi ac volutpat dignissim. Suspendisse potenti. Sed tempus scelerisque tortor, vitae tincidunt nulla. Quisque sagittis erat urna, vel volutpat est iaculis vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris molestie tellus lectus, eu vulputate orci dapibus nec. Phasellus tempor ipsum non risus fermentum, et rutrum magna mattis. Donec eleifend porta eros. Integer vel justo dignissim elit tempor blandit. Nunc ut tortor in erat elementum pretium. Duis ut ex vel erat venenatis fermentum elementum sit amet massa. Etiam semper urna vestibulum, pretium tortor vestibulum, dictum dui.",
-							"VS Code"
-						)
-					}
-					tabIndex="3"
-				>
-					<DiVisualstudio />
+				<div className="content">
+					<div className="icons">
+						<div
+							className="icon"
+							id="vscode"
+							onFocus={() =>
+								setTechs(
+									"#272935",
+									"VS Code is my editor of choice. A great plugin library, easy to navigate UI, and built-in terminal make this an easy choice for me. Prettier and Color Highlight have changed my life forever!",
+									"VS Code"
+								)
+							}
+							tabIndex="3"
+						>
+							<DiVisualstudio />
+						</div>
+						<div
+							className="icon"
+							id="docker"
+							onFocus={() =>
+								setTechs(
+									"#032144",
+									"For local wordPress development, Lando is my go-to for setting up an environment. Lando is an open source, docker based local development tool that makes setting up environments as easy as editing a single text file. With pre-built recipes for WordPress, you simply edit your .lando.yml file to include any build tools you may need, update your project name, and you're off to the races.",
+									"Docker"
+								)
+							}
+							tabIndex="4"
+						>
+							<FaDocker />
+						</div>
+						<div
+							className="icon"
+							id="react"
+							onFocus={() =>
+								setTechs(
+									"#29B1EF",
+									"This site is built with NextJS! For more complex web projects, react is my library of choice. NextJS is a framework built on react, that makes deploying a project absolutely painless. While I am still learning the ins and outs, it provides the functionality to create lightning fast, SEO friendly sites that you can deploy with a single line in the terminal.",
+									"Next.js"
+								)
+							}
+							tabIndex="5"
+						>
+							<FaReact />
+						</div>
+						<div
+							className="icon"
+							id="github"
+							onFocus={() =>
+								setTechs(
+									"#2DBD4E",
+									"All of my work and personal projects are managed with github. I've learned how to set up my config file to handle multiple SSH Keys for multiple accounts, the important of .gitignore, and a little bit of how to collaborate with co-workers (although I haven't taken charge of the merge just yet!).",
+									"Github"
+								)
+							}
+							tabIndex="6"
+						>
+							<DiGithubBadge />
+						</div>
+						<div
+							className="icon"
+							id="sass"
+							onFocus={() =>
+								setTechs(
+									"#CF649A",
+									"I don't even remember my world before Sass. Sass allows you to break up and organize your css files, nest elements, and introduces variables and mixins to allow for sweeping changes to things like default colors or base styles without having to touch every line. ",
+									"Sass"
+								)
+							}
+							tabIndex="7"
+						>
+							<DiSass />
+						</div>
+						<div
+							className="icon"
+							id="stackoverflow"
+							onFocus={() =>
+								setTechs(
+									"#F48025",
+									"I will be the first to admit when I don't know something, and I think that's important! With your ego out of the way, you are much more willing to seek out help, and more receptive to the help that is provided. StackOverflow is practically my home, constantly helping me through niche problems and other small gaps in my knowledge.",
+									"Stackoverflow"
+								)
+							}
+							tabIndex="8"
+						>
+							<DiStackoverflow />
+						</div>
+						<div
+							className="icon"
+							id="wordpress"
+							onFocus={() =>
+								setTechs(
+									"#D7DADE",
+									"Love it or hate it, WordPress is still a huge player in the web development world. My first full-time job in the field was doing WordPress development at an agency, and I've learned a great deal about it. From the basics like custom menus, post types, and fields, to more complex tasks like custom queries, api integration, ajax calls to custom PHP scripts, and even some basic custom plugin development. While I am constantly woriking to grow my skillset, I think it's safe to say that I am currently most comfortable working in WordPress.",
+									"WordPress"
+								)
+							}
+							tabIndex="9"
+						>
+							<DiWordpress />
+						</div>
+						<div
+							className="icon"
+							id="gulp"
+							onFocus={() =>
+								setTechs(
+									"#D7DADE",
+									"When it comes to WordPess development, WPGulp is indispensable. It will compile and minify your custom sass/JS with auto-prefixing for your compiled css, provides live browser reloading, and even image optimization. What more do I need to say?",
+									"WPGulp"
+								)
+							}
+							tabIndex="9"
+						>
+							<FaGulp />
+						</div>
+					</div>
+					<div className="description">
+						<div className="description-text">
+							<h2>{descriptionTitle}</h2>
+							<div className="underline"></div>
+							<p>{descriptionText}</p>
+						</div>
+					</div>
 				</div>
-				<div
-					className="icon"
-					id="docker"
-					onFocus={() =>
-						setTechs(
-							"#032144",
-							"Maecenas et lectus sapien. Aliquam neque elit, suscipit eu tincidunt quis, fermentum sed metus. Vivamus pretium elementum facilisis. Nullam ac mollis elit. Donec rhoncus pulvinar justo, nec accumsan ligula tincidunt id. Sed non enim posuere, condimentum leo quis, viverra est. Morbi ac mattis ipsum. Praesent laoreet nisi non justo commodo, vitae fermentum metus ultricies. Quisque neque erat, tincidunt at mauris vel, vulputate tempor nisi. Curabitur et tincidunt diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-							"Docker"
-						)
-					}
-					tabIndex="4"
-				>
-					<FaDocker />
-				</div>
-				<div
-					className="icon"
-					id="react"
-					onFocus={() =>
-						setTechs(
-							"#29B1EF",
-							"Aliquam eget finibus erat, mattis eleifend dui. Ut tempus ullamcorper justo non volutpat. Duis imperdiet pellentesque orci id feugiat. Duis fringilla, nulla sed porta porttitor, mi elit interdum elit, sit amet rutrum nunc enim ac elit. Morbi a condimentum augue, at gravida turpis. Suspendisse semper orci nunc, id faucibus ante vehicula vitae. Ut mattis felis sed nunc bibendum consequat. Vivamus tincidunt nibh vel libero pretium tincidunt. In nunc enim, lobortis sit amet vehicula ut, hendrerit vitae tellus.",
-							"Next.js"
-						)
-					}
-					tabIndex="5"
-				>
-					<FaReact />
-				</div>
-				<div
-					className="icon"
-					id="github"
-					onFocus={() =>
-						setTechs(
-							"#2DBD4E",
-							"Duis vel varius nibh, nec malesuada turpis. Quisque mollis maximus felis eu tempor. Praesent nec tristique lacus, vel gravida odio. Mauris ac maximus tellus. Sed eu risus nunc. Nulla cursus semper rhoncus. Donec vitae neque purus. Nunc iaculis tellus at molestie finibus. Sed in tincidunt odio. Sed et turpis ac tortor luctus eleifend a eget est.",
-							"Github"
-						)
-					}
-					tabIndex="6"
-				>
-					<DiGithubBadge />
-				</div>
-				<div
-					className="icon"
-					id="sass"
-					onFocus={() =>
-						setTechs(
-							"#CF649A",
-							"Nulla non augue a massa egestas sagittis quis sit amet urna. Duis vitae quam id dui fermentum lacinia. Pellentesque vel ante id nisl viverra dictum eu sed ex. Vivamus purus lacus, iaculis molestie lorem sit amet, pulvinar gravida libero. Cras tincidunt, turpis eget maximus consequat, mauris sapien bibendum lacus, ut pulvinar elit diam non sapien. Nunc placerat purus malesuada accumsan viverra. Vestibulum convallis justo eu urna dictum, at fringilla sem auctor.",
-							"Sass"
-						)
-					}
-					tabIndex="7"
-				>
-					<DiSass />
-				</div>
-				<div
-					className="icon"
-					id="stackoverflow"
-					onFocus={() =>
-						setTechs(
-							"#F48025",
-							"Fusce arcu magna, congue vel gravida in, dictum a erat. Aenean vestibulum augue quis lobortis porttitor. Integer ante urna, elementum id porttitor quis, efficitur ut libero. Sed eget feugiat urna. Phasellus in posuere orci. Mauris sollicitudin urna quis risus semper commodo. Mauris ullamcorper mi et nunc sagittis, a molestie neque consequat. Aliquam pretium pulvinar sem, eu laoreet nisl vehicula luctus. Proin ante elit, vestibulum at neque faucibus, scelerisque viverra ante. Nullam facilisis nisi eget tortor iaculis porttitor.",
-							"Stackoverflow"
-						)
-					}
-					tabIndex="8"
-				>
-					<DiStackoverflow />
-				</div>
-				<div
-					className="icon"
-					id="wordpress"
-					onFocus={() =>
-						setTechs(
-							"#D7DADE",
-							"Ut accumsan lectus a enim pulvinar vulputate. Vestibulum vulputate lectus quis quam mollis bibendum. Proin malesuada mollis velit, id tempus augue tincidunt ut. Ut hendrerit nulla id augue euismod, sed pretium purus fringilla. Proin sit amet convallis mi. Sed ornare condimentum sapien, in ullamcorper nibh gravida non. Praesent arcu enim, vestibulum ut lacus suscipit, facilisis rutrum est. Donec fermentum erat arcu, ac dapibus nisi vestibulum sit amet. Morbi sed tincidunt odio. Aliquam bibendum molestie odio, condimentum tristique sapien vulputate nec. Vestibulum vitae malesuada nisl. Mauris varius a nulla at malesuada.",
-							"WordPress"
-						)
-					}
-					tabIndex="9"
-				>
-					<DiWordpress />
-				</div>
-				<div
-					className="icon"
-					id="gulp"
-					onFocus={() =>
-						setTechs(
-							"#D7DADE",
-							"Ut accumsan lectus a enim pulvinar vulputate. Vestibulum vulputate lectus quis quam mollis bibendum. Proin malesuada mollis velit, id tempus augue tincidunt ut. Ut hendrerit nulla id augue euismod, sed pretium purus fringilla. Proin sit amet convallis mi. Sed ornare condimentum sapien, in ullamcorper nibh gravida non. Praesent arcu enim, vestibulum ut lacus suscipit, facilisis rutrum est. Donec fermentum erat arcu, ac dapibus nisi vestibulum sit amet. Morbi sed tincidunt odio. Aliquam bibendum molestie odio, condimentum tristique sapien vulputate nec. Vestibulum vitae malesuada nisl. Mauris varius a nulla at malesuada.",
-							"WPGulp"
-						)
-					}
-					tabIndex="9"
-				>
-					<FaGulp />
-				</div>
-			</div>
-			<div className="description">
-				<div className="description-text">
-					<h2>{descriptionTitle}</h2>
-					<div className="underline"></div>
-					<p>{descriptionText}</p>
-				</div>
-				</div>
-			</div>
 			</div>
 			<style jsx>{`
-				.section-heading {
+				.full-width {
 					position: sticky;
 					top: 0px;
 					z-index: 1;
@@ -168,7 +172,7 @@ const Technologies = () => {
 					margin:0;
 					padding:0;
 				}
-				.technologies > .custom-wrapper > h2 {
+				.technologies > .full-width > .custom-wrapper > h2 {
 					margin: 0;
 					padding: 15px 10%;
 					padding-left:15px;
@@ -246,6 +250,9 @@ const Technologies = () => {
 				}
 				
 				@media (min-width:768px){
+					.description-text{
+						height:510px!important;
+					}
 					.technologies{
 						
 						left:0;
