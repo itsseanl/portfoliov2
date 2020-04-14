@@ -1,11 +1,11 @@
 import { MdTimer } from "react-icons/md";
 import { FaUsers, FaTools, FaGlasses } from "react-icons/fa";
 import {
-	FaDocker,
-	FaReact,
-	FaGulp,
-	FaGitSquare,
-	FaLinkedin,
+  FaDocker,
+  FaReact,
+  FaGulp,
+  FaGitSquare,
+  FaLinkedin
 } from "react-icons/fa";
 
 import MyHeader from "../components/Header";
@@ -14,112 +14,112 @@ import ContactForm from "../components/ContactForm";
 import { createGlobalStyle } from "styled-components";
 
 function HomePage() {
-	return (
-		<>
-			<GlobalStyle />
-			<MyHeader />
-			<main>
-				<Technologies />
-				<section className="featured-project">
-					<div className="featured">
-						<div className="overlay">
-							<h2>Featured Project</h2>
-							<div className="underline short"></div>
-							<h4>NextJS Spotify Visualizer</h4>
-						</div>
-						<div className="custom-wrapper">
-							<p>
-								A work in progress! a while back, I created a basic music
-								visualizer that connects to spotify's web API and creates
-								animations on an HTML5 Canvas based on the audioAnalysis
-								retrieved from each currently playing song. I had some real
-								issues handling the data due to the realtime nature of the code,
-								and ultimately produced a sub-par project. With react hooks,
-								I've been finding that state management makes this process much
-								easier, and allows me to more closely match the progression of
-								the song. Right now I have just the tempo feeding into the
-								background color, and the bars being tracked and returning a
-								console.log for each match between the start of a new bar and
-								the current point in time in the track.
-							</p>
-						</div>
-						<div className="theBtns">
-							<a
-								className="theLink codeLink"
-								href="https://github.com/itsseanl/next-spotify-visualizer"
-							>
-								The Code
-							</a>
-							<a className="theLink siteLink">The Site (coming soon)</a>
-						</div>
-					</div>
-				</section>
-				<section className="experience">
-					<div className="full-width">
-						<div className="custom-wrapper section-heading">
-							<h2>Skills & Experience</h2>
-						</div>
-					</div>
-					<div className="custom-wrapper">
-						<div className="exp-items">
-							<div className="exp-item">
-								<MdTimer />
-								<h3>Project Management</h3>
-								<div className="underline tiny"></div>
-								<p>coming soon</p>
-							</div>
-							<div className="exp-item">
-								<FaUsers />
-								<h3>Team-Based Workflow</h3>
-								<div className="underline tiny"></div>
+  return (
+    <>
+      <GlobalStyle />
+      <MyHeader />
+      <main>
+        <Technologies />
+        <section className="featured-project">
+          <div className="featured">
+            <div className="overlay">
+              <h2>Featured Project</h2>
+              <div className="underline short"></div>
+              <h4>NextJS Spotify Visualizer</h4>
+            </div>
+            <div className="custom-wrapper">
+              <p>
+                A work in progress! a while back, I created a basic music
+                visualizer that connects to spotify's web API and creates
+                animations on an HTML5 Canvas based on the audioAnalysis
+                retrieved from each currently playing song. I had some real
+                issues handling the data due to the realtime nature of the code,
+                and ultimately produced a sub-par project. With react hooks,
+                I've been finding that state management makes this process much
+                easier, and allows me to more closely match the progression of
+                the song. Right now I have just the tempo feeding into the
+                background color, and the bars being tracked and returning a
+                console.log for each match between the start of a new bar and
+                the current point in time in the track.
+              </p>
+            </div>
+            <div className="theBtns">
+              <a
+                className="theLink codeLink"
+                href="https://github.com/itsseanl/next-spotify-visualizer"
+              >
+                The Code
+              </a>
+              <a className="theLink siteLink">The Site</a>
+            </div>
+          </div>
+        </section>
+        <section className="experience">
+          <div className="full-width">
+            <div className="custom-wrapper section-heading">
+              <h2>Skills & Experience</h2>
+            </div>
+          </div>
+          <div className="custom-wrapper">
+            <div className="exp-items">
+              <div className="exp-item">
+                <MdTimer />
+                <h3>Project Management</h3>
+                <div className="underline tiny"></div>
+                <p>coming soon</p>
+              </div>
+              <div className="exp-item">
+                <FaUsers />
+                <h3>Team-Based Workflow</h3>
+                <div className="underline tiny"></div>
 
-								<p>coming soon</p>
-							</div>
-							<div className="exp-item">
-								<FaTools />
-								<h3>Site Maintenance</h3>
-								<div className="underline tiny"></div>
+                <p>coming soon</p>
+              </div>
+              <div className="exp-item">
+                <FaTools />
+                <h3>Site Maintenance</h3>
+                <div className="underline tiny"></div>
 
-								<p>coming soon</p>
-							</div>
-							<div className="exp-item">
-								<FaGlasses />
-								<h3>Attention to Detail</h3>
-								<div className="underline tiny"></div>
+                <p>coming soon</p>
+              </div>
+              <div className="exp-item">
+                <FaGlasses />
+                <h3>Attention to Detail</h3>
+                <div className="underline tiny"></div>
 
-								<p>coming soon</p>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<footer>
-				<div className="custom-wrapper">
-					<div className="footer-left">
-						<div className="footer-heading">
-							<h2>Get in touch!</h2>
-						</div>
-						<p>
-							If you'd like to discuss any of my skills, projects, or
-							technologies of choice, drop me a line! I'm always looking for the
-							next opportunity to learn, share, and grow as a developer.
-						</p>
-						<a href="https://github.com/itsseanl">
-							<FaGitSquare />
-							https://github.com/itsseanl
-						</a>
-						<a href="https://www.linkedin.com/in/itsseanl/">
-							<FaLinkedin />
-							https://www.linkedin.com/in/itsseanl/
-						</a>
-					</div>
-					<div className="footer-right">
-						<div className="underline"></div>
-						<ContactForm />
-					</div>
-				</div>
-			</footer>
-			<style jsx global>{`
+                <p>coming soon</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div className="custom-wrapper">
+          <div className="footer-left">
+            <div className="footer-heading">
+              <h2>Get in touch!</h2>
+            </div>
+            <p>
+              If you'd like to discuss any of my skills, projects, or
+              technologies of choice, drop me a line! I'm always looking for the
+              next opportunity to learn, share, and grow as a developer.
+            </p>
+            <a href="https://github.com/itsseanl">
+              <FaGitSquare />
+              https://github.com/itsseanl
+            </a>
+            <a href="https://www.linkedin.com/in/itsseanl/">
+              <FaLinkedin />
+              https://www.linkedin.com/in/itsseanl/
+            </a>
+          </div>
+          <div className="footer-right">
+            <div className="underline"></div>
+            <ContactForm />
+          </div>
+        </div>
+      </footer>
+      <style jsx global>{`
 			.full-width{
 				position:sticky;
 				top: 0;
@@ -193,14 +193,30 @@ function HomePage() {
 					margin: auto;
 				}
 				.theBtns{
-
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex: 1 0 auto;
+					flex-wrap: nowrap;
+					width: 100%;
 				}
 				.theLink{
 					padding:15px;
-
+					text-decoration:none;
+					font-family:"Lobster", sans-serif;
+					box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.3);
+					margin:15px;
+					width:50%!important;
+					max-width: 300px;
+					
 				}
 				.codeLink{
-					background:#FFFFFFF0;
+					background:#FFFFF0;
+					color:#333;
+				}
+				.siteLink{
+					background:#333;
+					color:#FFFFF0;
 				}
 
 				.experience {
@@ -352,8 +368,8 @@ function HomePage() {
 					}
 				}
 			`}</style>
-		</>
-	);
+    </>
+  );
 }
 const GlobalStyle = createGlobalStyle`
 
