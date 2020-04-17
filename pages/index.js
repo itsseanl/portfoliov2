@@ -17,7 +17,9 @@ function HomePage() {
   return (
     <>
       <GlobalStyle />
+
       <MyHeader />
+
       <main>
         <Technologies />
         <section className="featured-project">
