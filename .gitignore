@@ -1,6 +1,4 @@
 node_modules/
 .nowsendgrid.env
-sendgrid.env
-sendgrid.env
-sendgrid.env
+.env
 .next
