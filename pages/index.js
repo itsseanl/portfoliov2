@@ -1,127 +1,74 @@
 import { MdTimer } from "react-icons/md";
 import { FaUsers, FaTools, FaGlasses } from "react-icons/fa";
 import {
-  FaDocker,
-  FaReact,
-  FaGulp,
-  FaGitSquare,
-  FaLinkedin
+	FaDocker,
+	FaReact,
+	FaGulp,
+	FaGitSquare,
+	FaLinkedin,
 } from "react-icons/fa";
 
 import MyHeader from "../components/Header";
 import Technologies from "../components/Technologies";
 import ContactForm from "../components/ContactForm";
+import Projects from "../components/Projects";
 import { createGlobalStyle } from "styled-components";
+import react, { useState, useEffect } from "react";
 
 function HomePage() {
-  return (
-    <>
-      <GlobalStyle />
+	const [color, setColor] = useState("#272935");
+	const [descriptionTitle, setDescriptionTitle] = useState("VS Code");
+	const [descriptionText, setDescriptionText] = useState(
+		"VS Code is my editor of choice. A great plugin library, easy to navigate UI, and built-in terminal make this an easy choice for me. Prettier and Color Highlight have changed my life forever!"
+	);
 
-      <MyHeader />
+	const handleColorChange = (col, title, text) => {
+		setColor(col);
+		setDescriptionTitle(text);
+		setDescriptionText(title);
+	};
+	return (
+		<>
+			<GlobalStyle />
 
-      <main>
-        <Technologies />
-        <section className="featured-project">
-          <div className="featured">
-            <div className="overlay">
-              <h2>Featured Project</h2>
-              <div className="underline short"></div>
-              <h4>NextJS Spotify Visualizer</h4>
-            </div>
-            <div className="custom-wrapper">
-              <p>
-                A work in progress! a while back, I created a basic music
-                visualizer that connects to spotify's web API and creates
-                animations on an HTML5 Canvas based on the audioAnalysis
-                retrieved from each currently playing song. I had some real
-                issues handling the data due to the realtime nature of the code,
-                and ultimately produced a sub-par project. With react hooks,
-                I've been finding that state management makes this process much
-                easier, and allows me to more closely match the progression of
-                the song. Right now I have just the tempo feeding into the
-                background color, and the bars being tracked and returning a
-                console.log for each match between the start of a new bar and
-                the current point in time in the track.
-              </p>
-            </div>
-            <div className="theBtns">
-              <a
-                className="theLink codeLink"
-                href="https://github.com/itsseanl/next-spotify-visualizer"
-              >
-                The Code
-              </a>
-              <a className="theLink siteLink">The Site</a>
-            </div>
-          </div>
-        </section>
-        <section className="experience">
-          <div className="full-width">
-            <div className="custom-wrapper section-heading">
-              <h2>Skills & Experience</h2>
-            </div>
-          </div>
-          <div className="custom-wrapper">
-            <div className="exp-items">
-              <div className="exp-item">
-                <MdTimer />
-                <h3>Project Management</h3>
-                <div className="underline tiny"></div>
-                <p>coming soon</p>
-              </div>
-              <div className="exp-item">
-                <FaUsers />
-                <h3>Team-Based Workflow</h3>
-                <div className="underline tiny"></div>
+			<MyHeader />
 
-                <p>coming soon</p>
-              </div>
-              <div className="exp-item">
-                <FaTools />
-                <h3>Site Maintenance</h3>
-                <div className="underline tiny"></div>
-
-                <p>coming soon</p>
-              </div>
-              <div className="exp-item">
-                <FaGlasses />
-                <h3>Attention to Detail</h3>
-                <div className="underline tiny"></div>
-
-                <p>coming soon</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div className="custom-wrapper">
-          <div className="footer-left">
-            <div className="footer-heading">
-              <h2>Get in touch!</h2>
-            </div>
-            <p>
-              If you'd like to discuss any of my skills, projects, or
-              technologies of choice, drop me a line! I'm always looking for the
-              next opportunity to learn, share, and grow as a developer.
-            </p>
-            <a href="https://github.com/itsseanl">
-              <FaGitSquare />
-              https://github.com/itsseanl
-            </a>
-            <a href="https://www.linkedin.com/in/itsseanl/">
-              <FaLinkedin />
-              https://www.linkedin.com/in/itsseanl/
-            </a>
-          </div>
-          <div className="footer-right">
-            <div className="underline"></div>
-            <ContactForm />
-          </div>
-        </div>
-      </footer>
-      <style jsx global>{`
+			<main>
+				<Technologies
+					color={color}
+					descriptionTitle={descriptionTitle}
+					descriptionText={descriptionText}
+					handleColorChange={handleColorChange}
+				/>
+				<Projects />
+			</main>
+			<footer>
+				<div className="custom-wrapper">
+					<div className="footer-left">
+						<div className="footer-heading">
+							<h2>Get in touch!</h2>
+						</div>
+						<p>
+							If you'd like to discuss any of my skills, projects, or
+							technologies of choice, drop me a line! I'm always looking for the
+							next opportunity to learn, share, and grow as a developer.
+						</p>
+						<a href="https://github.com/itsseanl">
+							<FaGitSquare />
+							https://github.com/itsseanl
+						</a>
+						<a href="https://www.linkedin.com/in/itsseanl/">
+							<FaLinkedin />
+							https://www.linkedin.com/in/itsseanl/
+						</a>
+					</div>
+					<div className="footer-right">
+						<div className="underline"></div>
+						<ContactForm />
+					</div>
+				</div>
+			</footer>
+			<style jsx global>{`
 			.full-width{
 				position:sticky;
 				top: 0;
@@ -142,7 +89,7 @@ function HomePage() {
 				}
 				.underline {
 					height: 4px;
-					background: #333;
+					background: ${color};
 					width: 60%;
 				}
 				.short {
@@ -256,14 +203,14 @@ function HomePage() {
 					font-size: 28px;
 				}
 				footer {
-					background: #333;
+					background: ${color};
 
 					height: auto;
 					padding: 50px 0;
 				}
 				.footer-left > .footer-heading > h2 {
 					color: #fff;
-					background: #333;
+					background: ${color};
 					margin:5px;
 				}
 				
@@ -274,7 +221,7 @@ function HomePage() {
 					display:block;
 					width:90%;
 					color: #fff !important;
-					background: #333;
+					background: ${color};
 				}
 
 				.footer-heading > .underline {
@@ -370,8 +317,8 @@ function HomePage() {
 					}
 				}
 			`}</style>
-    </>
-  );
+		</>
+	);
 }
 const GlobalStyle = createGlobalStyle`
 

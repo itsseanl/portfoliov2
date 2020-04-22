@@ -942,7 +942,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/home/sean/Sites/portfoliov2/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/seanlyons/Sites/portfoliov2/.next");
       return error;
     }
   };

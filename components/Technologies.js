@@ -8,18 +8,12 @@ import {
 } from "react-icons/di";
 import { useState } from "react";
 
-const Technologies = () => {
-	const [accentColor, setAccentColor] = useState("#333");
-	const [descriptionText, setDescriptionText] = useState(
-		"VS Code is my editor of choice. A great plugin library, easy to navigate UI, and built-in terminal make this an easy choice for me. Prettier and Color Highlight have changed my life forever!"
-	);
-	const [descriptionTitle, setDescriptionTitle] = useState("VS Code");
-
-	const setTechs = (color, text, title) => {
-		setAccentColor(color);
-		setDescriptionTitle(title);
-		setDescriptionText(text);
-	};
+const Technologies = ({
+	color,
+	descriptionTitle,
+	descriptionText,
+	handleColorChange,
+}) => {
 	return (
 		<section className="technologies">
 			<div className="full-width">
@@ -34,8 +28,8 @@ const Technologies = () => {
 							className="icon"
 							id="vscode"
 							onFocus={() =>
-								setTechs(
-									"#272935",
+								handleColorChange(
+									"red",
 									"VS Code is my editor of choice. A great plugin library, easy to navigate UI, and built-in terminal make this an easy choice for me. Prettier and Color Highlight have changed my life forever!",
 									"VS Code"
 								)
@@ -48,7 +42,7 @@ const Technologies = () => {
 							className="icon"
 							id="docker"
 							onFocus={() =>
-								setTechs(
+								handleColorChange(
 									"#032144",
 									"For local wordPress development, Lando is my go-to for setting up an environment. Lando is an open source, docker based local development tool that makes setting up environments as easy as editing a single text file. With pre-built recipes for WordPress, you simply edit your .lando.yml file to include any build tools you may need, update your project name, and you're off to the races.",
 									"Docker"
@@ -62,7 +56,7 @@ const Technologies = () => {
 							className="icon"
 							id="react"
 							onFocus={() =>
-								setTechs(
+								handleColorChange(
 									"#29B1EF",
 									"This site is built with NextJS! For more complex web projects, react is my library of choice. NextJS is a framework built on react, that makes deploying a project absolutely painless. While I am still learning the ins and outs, it provides the functionality to create lightning fast, SEO friendly sites that you can deploy with a single line in the terminal.",
 									"Next.js"
@@ -76,7 +70,7 @@ const Technologies = () => {
 							className="icon"
 							id="github"
 							onFocus={() =>
-								setTechs(
+								handleColorChange(
 									"#2DBD4E",
 									"All of my work and personal projects are managed with github. I've learned how to set up my config file to handle multiple SSH Keys for multiple accounts, the important of .gitignore, and a little bit of how to collaborate with co-workers (although I haven't taken charge of the merge just yet!).",
 									"Github"
@@ -90,7 +84,7 @@ const Technologies = () => {
 							className="icon"
 							id="sass"
 							onFocus={() =>
-								setTechs(
+								handleColorChange(
 									"#CF649A",
 									"I don't even remember my world before Sass. Sass allows you to break up and organize your css files, nest elements, and introduces variables and mixins to allow for sweeping changes to things like default colors or base styles without having to touch every line. ",
 									"Sass"
@@ -104,7 +98,7 @@ const Technologies = () => {
 							className="icon"
 							id="stackoverflow"
 							onFocus={() =>
-								setTechs(
+								handleColorChange(
 									"#F48025",
 									"I will be the first to admit when I don't know something, and I think that's important! With your ego out of the way, you are much more willing to seek out help, and more receptive to the help that is provided. StackOverflow is practically my home, constantly helping me through niche problems and other small gaps in my knowledge.",
 									"Stackoverflow"
@@ -118,7 +112,7 @@ const Technologies = () => {
 							className="icon"
 							id="wordpress"
 							onFocus={() =>
-								setTechs(
+								handleColorChange(
 									"#D7DADE",
 									"Love it or hate it, WordPress is still a huge player in the web development world. My first full-time job in the field was doing WordPress development at an agency, and I've learned a great deal about it. From the basics like custom menus, post types, and fields, to more complex tasks like custom queries, api integration, ajax calls to custom PHP scripts, and even some basic custom plugin development. While I am constantly woriking to grow my skillset, I think it's safe to say that I am currently most comfortable working in WordPress.",
 									"WordPress"
@@ -132,7 +126,7 @@ const Technologies = () => {
 							className="icon"
 							id="gulp"
 							onFocus={() =>
-								setTechs(
+								handleColorChange(
 									"#D7DADE",
 									"When it comes to WordPess development, WPGulp is indispensable. It will compile and minify your custom sass/JS with auto-prefixing for your compiled css, provides live browser reloading, and even image optimization. What more do I need to say?",
 									"WPGulp"
@@ -157,11 +151,11 @@ const Technologies = () => {
 					position: sticky;
 					top: 0px;
 					z-index: 1;
-					background: ${accentColor};
+					background: ${color};
 					width: 100%;
 				}
 				.technologies {
-					background: ${accentColor};
+					background: ${color};
 					padding-top: 40px;
 				}
 				.technologies > .custom-wrapper{
@@ -189,9 +183,8 @@ const Technologies = () => {
 					left: 0;
 					right: 0;
 					margin: auto;
-					background: ${accentColor};
 					overflow: visible;
-					background: ${accentColor};
+					background: ${color};
 					flex-wrap: wrap;
 				}
 				.icon {
@@ -223,10 +216,10 @@ const Technologies = () => {
 					border: 1px solid rgba(0, 0, 0, 0);
 					font-size: 2.1em;
 					color: #fff;
-					background: ${accentColor};
+					background: ${color};
 				}
 				.description {
-/* 					background-image: linear-gradient(${accentColor} 50%, #fff 50%); */
+/* 					background-image: linear-gradient(${color} 50%, #fff 50%); */
 					transition: 0.3s all;
 					display: flex;
 					flex-direction: column;
@@ -245,7 +238,7 @@ const Technologies = () => {
 				}
 				.underline {
 					height: 4px;
-					background: ${accentColor};
+					background: ${color};
 					width: 60%;
 				}
 				
