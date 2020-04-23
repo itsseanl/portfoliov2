@@ -157,7 +157,6 @@ const Technologies = ({
 				.technologies {
 					background: ${color};
 					padding-top: 40px;
-					box-shadow:  -1px 0px 8px 2px rgba(0,0,0,0.3);
 
 				}
 				.technologies > .custom-wrapper{

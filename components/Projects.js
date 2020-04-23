@@ -99,6 +99,9 @@ const Projects = ({ color }) => {
       </div>
 
       <style jsx>{`
+        .custom-wrapper > h2 {
+          text-align: center;
+        }
         .wrap {
           width: 100%;
           display: flex;
@@ -129,8 +132,9 @@ const Projects = ({ color }) => {
           width: 80vw;
           display: flex;
           flex-wrap: nowrap;
-          height: 500px;
+          height: auto;
           max-height: 500px;
+          flex: 1 0 auto;
           transform: translateX(${scroll}vw);
           transition: 0.3s all;
         }
@@ -141,8 +145,9 @@ const Projects = ({ color }) => {
           justify-content: center;
           align-items: center;
           transition: 0.3s all;
-          height: 500px;
+          height: auto;
           max-height: 500px;
+          flex: 1 0 auto;
         }
 
         .left {

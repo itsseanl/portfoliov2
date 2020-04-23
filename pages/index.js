@@ -12,6 +12,7 @@ import MyHeader from "../components/Header";
 import Technologies from "../components/Technologies";
 import ContactForm from "../components/ContactForm";
 import Projects from "../components/Projects";
+import BuildSteps from "../components/BuildSteps";
 import { createGlobalStyle } from "styled-components";
 import react, { useState, useEffect } from "react";
 
@@ -40,6 +41,8 @@ function HomePage() {
           descriptionText={descriptionText}
           handleColorChange={handleColorChange}
         />
+        <BuildSteps color={color} />
+
         <Projects color={color} />
       </main>
       <footer>
