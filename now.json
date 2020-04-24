@@ -1,16 +1,16 @@
 {
-  "name": "itsseanl",
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/next"
-    }
-  ],
+	"name": "itsseanl",
+	"version": 2,
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@now/next"
+		}
+	],
 
-  "build": {
-    "env": {
-      "sendgrid_api_key": "@sendgrid_api_key"
-    }
-  }
+	"build": {
+		"env": {
+			"sendgrid_api_key": "@sendgrid_api_key2"
+		}
+	}
 }
