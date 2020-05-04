@@ -4,6 +4,15 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 const Projects = ({ color }) => {
 	const [projects, setProjects] = useState([
 		{
+			title: "CtaMaster - WordPress Plugin",
+			body:
+				"ctaMaster aims to provide easy to implement banners, modals, and more to your WordPress website. Currently banner functionality is implemented, with new features coming soon!",
+			class: "project",
+			liveLink: "/",
+			codeLInk: "https://github.com/itsseanl/ctaMaster-wp-plugin",
+			img: "/img/ctaMaster.png",
+		},
+		{
 			title: "UltimateStarterPacks",
 			body:
 				"Ultimate Starter Packs is a pet project that I've been using to explore SEO and marketing on my own. I've also learned a great deal by building it in NextJS! You can find more information in the Github repo readme.",
