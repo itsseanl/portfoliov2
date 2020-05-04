@@ -9,7 +9,7 @@ const Projects = ({ color }) => {
 				"ctaMaster aims to provide easy to implement banners, modals, and more to your WordPress website. Currently banner functionality is implemented, with new features coming soon!",
 			class: "project",
 			liveLink: "/",
-			codeLInk: "https://github.com/itsseanl/ctaMaster-wp-plugin",
+			codeLink: "https://github.com/itsseanl/ctaMaster-wp-plugin",
 			img: "/img/ctaMaster.png",
 		},
 		{
@@ -18,7 +18,7 @@ const Projects = ({ color }) => {
 				"Ultimate Starter Packs is a pet project that I've been using to explore SEO and marketing on my own. I've also learned a great deal by building it in NextJS! You can find more information in the Github repo readme.",
 			class: "project active",
 			liveLink: "https://ultimatestarterpacks.com",
-			codeLInk: "https://github.com/itsseanl/ultimatestarterpacks",
+			codeLink: "https://github.com/itsseanl/ultimatestarterpacks",
 			img: "/img/usp.png",
 		},
 		{
@@ -27,7 +27,7 @@ const Projects = ({ color }) => {
 				"Utilizing the OpenWeatherMap API, I build this basic webapp to practice fetching data with react. It also utilizes rechart to graph the daily temperature by hour",
 			class: "project",
 			liveLink: "https://openweathermap.now.sh",
-			codeLInk: "https://github.com/itsseanl/Pixel-Weather-Clone",
+			codeLink: "https://github.com/itsseanl/Pixel-Weather-Clone",
 			img: "/img/owmsmaller.png",
 		},
 
@@ -38,7 +38,7 @@ const Projects = ({ color }) => {
 			class: "project",
 
 			liveLink: "/",
-			codeLInk: "https://github.com/itsseanl/next-spotify-visualizer",
+			codeLink: "https://github.com/itsseanl/next-spotify-visualizer",
 			img: "/img/spotify.png",
 		},
 	]);
