@@ -208,6 +208,9 @@ const Projects = ({ color }) => {
 					.right {
 						display: none;
 					}
+					.left {
+						width: 80vw;
+					}
 				}
 				@media (min-width: 768px) {
 					.wrap {
