@@ -2,6 +2,7 @@ import React from "react";
 
 import App, { Container } from "next/app";
 import Head from "next/head";
+import GlobalStyles from "../components/GlobalStyles";
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }) {
 					font-family: "Ubuntu", sans-serif;
 				}
 			`}</style>
+			<GlobalStyles />
 		</Container>
 	);
 }
