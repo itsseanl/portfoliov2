@@ -1,11 +1,11 @@
 import { MdTimer } from "react-icons/md";
 import { FaUsers, FaTools, FaGlasses } from "react-icons/fa";
 import {
-	FaDocker,
-	FaReact,
-	FaGulp,
-	FaGitSquare,
-	FaLinkedin,
+  FaDocker,
+  FaReact,
+  FaGulp,
+  FaGitSquare,
+  FaLinkedin
 } from "react-icons/fa";
 
 import MyHeader from "../components/Header";
@@ -16,59 +16,59 @@ import BuildSteps from "../components/BuildSteps";
 import react, { useState, useEffect } from "react";
 
 function HomePage() {
-	const [color, setColor] = useState("#272935");
-	const [descriptionTitle, setDescriptionTitle] = useState("VS Code");
-	const [descriptionText, setDescriptionText] = useState(
-		"VS Code is my editor of choice. A great plugin library, easy to navigate UI, and built-in terminal make this an easy choice for me. Prettier and Color Highlight have changed my life forever!"
-	);
+  const [color, setColor] = useState("#272935");
+  const [descriptionTitle, setDescriptionTitle] = useState("VS Code");
+  const [descriptionText, setDescriptionText] = useState(
+    "VS Code is my editor of choice. A great plugin library, easy to navigate UI, and built-in terminal make this an easy choice for me. Prettier and Color Highlight have changed my life forever!"
+  );
 
-	const handleColorChange = (col, title, text) => {
-		setColor(col);
-		setDescriptionTitle(text);
-		setDescriptionText(title);
-	};
-	return (
-		<>
-			<MyHeader />
+  const handleColorChange = (col, title, text) => {
+    setColor(col);
+    setDescriptionTitle(text);
+    setDescriptionText(title);
+  };
+  return (
+    <>
+      <MyHeader />
 
-			<main>
-				<Technologies
-					color={color}
-					descriptionTitle={descriptionTitle}
-					descriptionText={descriptionText}
-					handleColorChange={handleColorChange}
-				/>
-				<BuildSteps color={color} />
+      <main>
+        <Technologies
+          color={color}
+          descriptionTitle={descriptionTitle}
+          descriptionText={descriptionText}
+          handleColorChange={handleColorChange}
+        />
+        <BuildSteps color={color} />
 
-				<Projects color={color} />
-			</main>
-			<footer>
-				<div className="custom-wrapper">
-					<div className="footer-left">
-						<div className="footer-heading">
-							<h2>Get in touch!</h2>
-						</div>
-						<p>
-							If you'd like to discuss any of my skills, projects, or
-							technologies of choice, drop me a line! I'm always looking for the
-							next opportunity to learn, share, and grow as a developer.
-						</p>
-						<a href="https://github.com/itsseanl">
-							<FaGitSquare />
-							https://github.com/itsseanl
-						</a>
-						<a href="https://www.linkedin.com/in/itsseanl/">
-							<FaLinkedin />
-							https://www.linkedin.com/in/itsseanl/
-						</a>
-					</div>
-					<div className="footer-right">
-						<div className="underline"></div>
-						<ContactForm color={color} />
-					</div>
-				</div>
-			</footer>
-			<style jsx global>{`
+        <Projects color={color} />
+      </main>
+      <footer>
+        <div className="custom-wrapper">
+          <div className="footer-left">
+            <div className="footer-heading">
+              <h2>Get in touch!</h2>
+            </div>
+            <p>
+              If you'd like to discuss any of my skills, projects, or
+              technologies of choice, drop me a line! I'm always looking for the
+              next opportunity to learn, share, and grow as a developer.
+            </p>
+            <a href="https://github.com/itsseanl">
+              <FaGitSquare />
+              https://github.com/itsseanl
+            </a>
+            <a href="https://www.linkedin.com/in/itsseanl/">
+              <FaLinkedin />
+              https://www.linkedin.com/in/itsseanl/
+            </a>
+          </div>
+          <div className="footer-right">
+            <div className="underline"></div>
+            <ContactForm color={color} />
+          </div>
+        </div>
+      </footer>
+      <style jsx global>{`
 	    :global(*) {
 			box-sizing: border-box;
 		  }
@@ -140,7 +140,6 @@ function HomePage() {
 					box-shadow: inset 0px 2px 12px 2px rgba(0, 0, 0, 0.3);
 					background: rgba(255, 255, 255, 0.8);
 					background-blend-mode: lighten;
-					background-image: url(${require("../assets/img/project.png")});
 					background-size: cover;
 					background-position: center;
 					background-repeat: no-repeat;
@@ -342,7 +341,7 @@ function HomePage() {
 					}
 				}
 			`}</style>
-		</>
-	);
+    </>
+  );
 }
 export default HomePage;
