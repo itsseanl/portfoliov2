@@ -3,7 +3,7 @@ import MyHeader from "../../components/Header";
 const Blog = () => {
 	let posts = [
 		{
-			title: "Creating a Blog With NextJS and Markdown",
+			title: "Build a Blog With NextJS and Markdown",
 			date: "May 8th, 2020",
 		},
 	];
@@ -26,7 +26,7 @@ const Blog = () => {
 						return (
 							<a
 								className="post"
-								href={"/post/" + post.title}
+								href={"/blog/" + post.title}
 								style={{ animationDelay: `${fadeIn}s` }}
 							>
 								<h3>{post.title}</h3>
@@ -98,7 +98,8 @@ const Blog = () => {
 				}
 				.post h3 {
 					font-family: "Lobster", sans-serif;
-					font-size: 18px;
+					font-size: 2em;
+					line-height: 1.2em;
 					margin: 15px 0;
 				}
 				.post .underline {
