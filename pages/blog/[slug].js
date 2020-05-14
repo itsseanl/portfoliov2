@@ -23,6 +23,9 @@ const Post = ({ content }) => {
 				</div>
 			</div>
 			<style jsx>{`
+				a {
+					color: #333 !important;
+				}
 				a > :global(svg) {
 					font-size: 48px;
 					color: #333;
@@ -51,9 +54,6 @@ const Post = ({ content }) => {
 };
 Post.getInitialProps = async ({ query }) => {
 	let postPath = query.slug;
-	postPath = postPath.replace(/ /g, "-");
-	postPath = postPath.toLowerCase();
-	// postPath = postPath.replace()
 	const content = await require(`../../blog/${postPath}.md`);
 	return { content };
 };

@@ -1,7 +1,7 @@
 import react, { useEffect, useRef, useState } from "react";
 import MyHeader from "../../components/Header";
 const Blog = () => {
-	let posts = [
+	const posts = [
 		{
 			title: "Build a Blog With NextJS and Markdown",
 			date: "May 8th, 2020",
@@ -26,7 +26,7 @@ const Blog = () => {
 						return (
 							<a
 								className="post"
-								href={"/blog/" + post.title}
+								href={"/blog/" + post.title.replace(/ /g, "-").toLowerCase()}
 								style={{ animationDelay: `${fadeIn}s` }}
 							>
 								<h3>{post.title}</h3>

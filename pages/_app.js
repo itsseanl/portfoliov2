@@ -12,6 +12,19 @@ function MyApp({ Component, pageProps }) {
 					href="https://fonts.googleapis.com/css?family=Lobster|Ubuntu&display=swap"
 					rel="stylesheet"
 				/>
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=UA-46552514-6"
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-46552514-6');`,
+					}}
+				></script>
 			</Head>
 
 			<Component {...pageProps} />
