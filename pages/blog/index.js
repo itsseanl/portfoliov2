@@ -3,6 +3,14 @@ import MyHeader from "../../components/Header";
 const Blog = () => {
 	const posts = [
 		{
+			title: "Using TailwindCSS with WPGulp",
+			date: "June 18th, 2020",
+		},
+		{
+			title: "I Built a Radius Based Messaging Platform",
+			date: "May 19th, 2020",
+		},
+		{
 			title: "Build a Blog With NextJS and Markdown",
 			date: "May 8th, 2020",
 		},

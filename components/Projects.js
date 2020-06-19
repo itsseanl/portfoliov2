@@ -4,6 +4,15 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 const Projects = ({ color }) => {
 	const [projects, setProjects] = useState([
 		{
+			title: "HeyNeighbor - A Radius Based Messaging App",
+			body:
+				"Utilizing Auth0, MongoDB, and NextJS, HeyNeighbor allows users to see posts created by other users within a selected radius up to 100 miles. The goal of this project is to provide a venue for neighbors, blocks, and communities to quickly share information with on another.",
+			class: "project",
+			liveLink: "https://hey-neighbor.now.sh/",
+			codeLink: "https://github.com/itsseanl/heyneighbor",
+			img: "/img/heyneighbor.png",
+		},
+		{
 			title: "CtaMaster - WordPress Plugin",
 			body:
 				"ctaMaster aims to provide easy to implement banners, modals, and more to your WordPress website. Currently banner functionality is implemented, with new features coming soon!",

@@ -8,6 +8,18 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<Container>
 			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<title>Sean Lyons | Front End Developer | itsseanl.com</title>
+				<meta
+					name="description"
+					content="My Portfolio site and blog. Read my blog for tips, guides, and write-ups on what I've been building with Nextjs, MongoDB, WordPress, and more!"
+				/>
+
+				<script
+					data-ad-client="ca-pub-6973815714764332"
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+				></script>
 				<link
 					href="https://fonts.googleapis.com/css?family=Lobster|Ubuntu&display=swap"
 					rel="stylesheet"

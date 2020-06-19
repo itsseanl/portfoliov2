@@ -14,6 +14,7 @@ import ContactForm from "../components/ContactForm";
 import Projects from "../components/Projects";
 import BuildSteps from "../components/BuildSteps";
 import react, { useState, useEffect } from "react";
+import Head from "next/head";
 
 function HomePage() {
 	const [color, setColor] = useState("#272935");
@@ -29,6 +30,14 @@ function HomePage() {
 	};
 	return (
 		<>
+			<Head>
+				<meta
+					name="description"
+					content={
+						"My personal slice of the internet. Click the pen icon in the header to check out my blog, where I discuss my latest projects with React, NextJS, WordPress and more on a weekly basis."
+					}
+				/>
+			</Head>
 			<MyHeader />
 
 			<main>
